@@ -8,7 +8,7 @@ using namespace std;
 long double x[5], y[5], a[5], b[4], c[3], d;
 long double forward_dy_dx, backward_dy_dx, central_dy_dx, stirling_dy_dx, pochodna, dydx[4];
 int i,j;
-long double x0= 1.3555671318417314, h;
+long double x0, h;
 
 long double Pochodna(double x0)
 {
@@ -165,8 +165,8 @@ long double Central(double x0, double h)
 int main()
 {
    
-    /*cout << "Podaj swoj x0" << endl;
-    cin >> x0;*/
+    cout << "Podaj swoj x0" << endl;
+    cin >> x0;
 
     cout << "Podaj swoj krok h" << endl;
     cin >> h;
@@ -184,7 +184,6 @@ int main()
     cout << endl;
     cout << "Wynik dla roznic centralnych = " << central_dy_dx << endl;
     cout << endl;
-
 
     Pochodna(x0);
     cout << "Wynik dla pochodnej wyznaczonej analitycznie = " << pochodna << endl;
