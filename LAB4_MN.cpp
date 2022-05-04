@@ -12,7 +12,7 @@ long double x0, h;
 
 long double Pochodna(double x0)
 {
-    pochodna = 5 * pow(x0, 4) - 60 * pow(x0, 3) + 255 * pow(x0, 2) - 450 * x0 + 274;
+    pochodna = 5*x0*x0*x0*x0  - 60 *x0*x0*x0 + 255 *x0*x0 - 450 * x0 + 274;
   
     for (j = 0; j < 3; j++)
     {
@@ -56,7 +56,7 @@ long double Forward(double x0, double h)
 
     for (i = 0; i < 5; i++)
     {// Wyliczanie f(x)
-        y[i] = pow(x[i], 5) - 15 * pow(x[i], 4) + 85 * pow(x[i], 3) - 225 * pow(x[i], 2) + 274 * x[i] - 120;
+        y[i] = x[i]*x[i]*x[i]*x[i]*x[i] - 15 * x[i]*x[i]*x[i]*x[i] + 85*x[i]*x[i]*x[i] - 225 *x[i]*x[i] + 274 * x[i] - 120;
         
     }
     cout << "f(" << x[0] << ") = " << y[0] << endl;
@@ -98,7 +98,7 @@ long double Backward(double x0, double h)
     }
     for (i = 0; i < 5; i++) // Wyliczanie f(x)
     {
-        y[i] = pow(x[i], 5) - 15 * pow(x[i], 4) + 85 * pow(x[i], 3) - 225 * pow(x[i], 2) + 274 * x[i] - 120;
+        y[i] =  x[i]*x[i]*x[i]*x[i]*x[i] - 15 * x[i]*x[i]*x[i]*x[i] + 85*x[i]*x[i]*x[i] - 225 *x[i]*x[i] + 274 * x[i] - 120;;
 
     }
     for (i = 0; i < 4; i++) // Î”y
@@ -138,7 +138,7 @@ long double Central(double x0, double h)
     }
 
     for (i = 0; i < 5; i++) // Wyliczanie f(x)
-        y[i] = pow(x[i], 5) - 15 * pow(x[i], 4) + 85 * pow(x[i], 3) - 225 * pow(x[i], 2) + 274 * x[i] - 120;
+        y[i] =  x[i]*x[i]*x[i]*x[i]*x[i] - 15 * x[i]*x[i]*x[i]*x[i] + 85*x[i]*x[i]*x[i] - 225 *x[i]*x[i] + 274 * x[i] - 120;;
 
 
     for (i = 0; i < 4; i++) // Î”y
